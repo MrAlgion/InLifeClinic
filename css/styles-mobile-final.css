@@ -281,6 +281,7 @@ header {
 .hero-left p {
   font-weight: 500;
   margin-bottom: 20px;
+  max-width: calc(100svw - 40px);
 }
 
 .btn2 {
