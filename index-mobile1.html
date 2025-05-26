@@ -79,45 +79,7 @@
         </div>
       </footer>
    
-    <script>
-      // відкриття бургер-меню
-      document.querySelector('.burger-btn').addEventListener('click', () => {
-        document.querySelector('.mobile-menu').classList.toggle('active');
-      });
-
-      // акордеон
-      document.querySelectorAll('.has-submenu > a').forEach((item) => {
-        item.addEventListener('click', (e) => {
-          e.preventDefault();
-          const parent = item.parentElement;
-          parent.classList.toggle('open');
-        });
-      });
-      const closeBtn = document.querySelector('.menu-close');
-      const mobileMenu = document.querySelector('.mobile-menu');
-
-      if (closeBtn && mobileMenu) {
-        closeBtn.addEventListener('click', () => {
-          mobileMenu.classList.remove('active');
-        });
-      }
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      new Swiper('.mySwiper', {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        slidesPerGroup: 1,
-        loop: true,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        keyboard: {
-          enabled: true,
-        },
-        slidesPerView: 1,
-      });
-    </script>
+    
+   
   </body>
 </html>
