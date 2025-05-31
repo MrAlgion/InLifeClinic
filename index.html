@@ -848,5 +848,25 @@
         },
       });
     </script>
+    <script>
+      const menu = document.querySelector('.menu-wrap');
+      const banner = document.querySelector('.contacts');
+      let lastScrollY = window.scrollY;
+
+      window.addEventListener('scroll', () => {
+        const currentScroll = window.scrollY;
+        const bannerBottom = banner.getBoundingClientRect().bottom;
+        if (currentScroll === 0) {
+          menu.style.top = '122px';
+        } else if (bannerBottom > 2) {
+          menu.style.top = '22px';
+        } else if (currentScroll < lastScrollY) {
+          menu.style.top = '20px';
+        } else if (currentScroll > lastScrollY && bannerBottom <= 2) {
+          menu.style.top = '-102px';
+        }
+        lastScrollY = currentScroll;
+      });
+    </script>
   </body>
 </html>
